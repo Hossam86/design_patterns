@@ -97,6 +97,28 @@ struct ColorSpecification : Specification<Product>
     }
 };
 
+struct SizeSpecification : Specification<Product>
+{
+    Size size;
+    SizeSpecification(Size size) : size(size) {}
+    bool is_satisfied(Product *item)
+    {
+        if (item->size == size)
+
+            return true;
+        else
+            return false;
+    }
+};
+struct AndSpecification : Specification<Product>
+{
+    Specification &spec1;
+    Specification &spec2;
+    explicit AndSpecification(Specification &spec1, Specification &spec2) : spec1(spec1), spec2(spec2) {}
+
+    bool is_satisfied(Product *item) { return spec1.is_satisfied(item) && spec2.is_satisfied(item); }
+};
+
 int main(int argc, char const *argv[])
 {
     Product apple{"Apple", Color::GREEN, Size::SMALL};
@@ -111,6 +133,13 @@ int main(int argc, char const *argv[])
     {
         cout << i->name << endl;
     }
+
+    SizeSpecification large(Size::LARGE);
+    ColorSpecification green(Color::GREEN);
+    AndSpecification green_and_large{large, green};
+    auto big_green_things = bf.filter(all, green_and_large);
+    for (auto &x : big_green_things)
+        cout << x->name << " is large and green" << endl;
 
     return 0;
 }
