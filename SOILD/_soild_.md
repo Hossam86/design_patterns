@@ -43,3 +43,8 @@ in other words, if the interface takes an object of type parent, it should equal
 ## Interface Segregation Principle
 
 the idea here is to segregate parts of a complicated interface into separate parts to avoid forcing implementors to implement something they don't need.
+
+## Dependency Inversion Principle
+
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+Simply we can say dependencies on interfaces or base classes are better than dependencies on concrete types.
