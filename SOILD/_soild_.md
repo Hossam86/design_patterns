@@ -37,5 +37,9 @@ we conceptually separate our filtering process into two parts
 
 ## Liskov Substitution Principle
 
-subtypes should be sbstiitble with basetype
-in other words, if the interface take an object of type parent, it should equlally take a child with out breaking any thing
+subtypes should be a substitution with base type
+in other words, if the interface takes an object of type parent, it should equally take a child without breaking anything
+
+## Interface Segregation Principle
+
+the idea here is to segregate parts of a complicated interface into separate parts to avoid forcing implementors to implement something they don't need.
