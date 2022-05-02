@@ -1,5 +1,9 @@
 # The SOLID Design Principles
 
+SOLID is a popular set of design principles that are used in object-oriented software development. SOLID is an acronym that stands for five key design principles: single responsibility principle, open-closed principle, Liskov substitution principle, interface segregation principle, and dependency inversion principle.
+
+The principles were developed originally by Robert C. Martin in 2000. Martin states that successful software will change and develop over time. As it changes, it becomes increasingly complex, rigid, and vicious if it doesn't have good design . So The principles were developed to avoid these problematic Issues.
+
 1. Single Responsibility Principle (SRP)
 2. Open-Closed Principle (OCP)
 3. Liskov Substitution Principle (LSP)
@@ -48,3 +52,7 @@ the idea here is to segregate parts of a complicated interface into separate par
 
 High-level modules should not depend on low-level modules. Both should depend on abstractions.
 Simply we can say dependencies on interfaces or base classes are better than dependencies on concrete types.
+
+## Summery
+
+Implementing SOLID design principles during development will lead to systems that are more maintainable, scalable, testable, and reusable.
