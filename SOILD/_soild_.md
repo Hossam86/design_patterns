@@ -15,7 +15,7 @@ The principles were developed originally by Robert C. Martin in 2000. Martin sta
 ### states that each class has only one responsibility, and therefore has only one reason to change
 
 in Example srp.cpp, suppose you decide to keep your journal, simply we have a class with a constructor and member function to add entries
-now suppose you decide to make the journal persist by saving it in a file. if we do it as a member function this will be problematic because any change in the persistence approach( cloud instead of a file, ..etc) would require a lot of tiny changes in affected classes
+now suppose you decide to make the journal persist by saving it in a file. if we do it as a member function this will be problematic because any change in the persistence approach (cloud instead of a file, ..etc) would require a lot of tiny changes in affected classes
 
 "an architecture that leads you to have to do lots of tiny changes in lost of classes, whether related (as in a hierarchy) or not, is typically a code smell "
 
@@ -56,3 +56,17 @@ Simply we can say dependencies on interfaces or base classes are better than dep
 ## Summery
 
 Implementing SOLID design principles during development will lead to systems that are more maintainable, scalable, testable, and reusable.
+
+First of all is the single responsibility principle, basically this idea that a class should only have one reason to change. And it's also related to something called separation of concerns,
+simply if you have a system that is handling different kinds of concerns, it makes sense to put them in different classes so that these
+can be refactored independently, for example, or replaced by something else.
+
+The second principle is the open-closed principle.
+States that classes should be open for extension and closed for modification. In otherwords, if you're coming back into an already written, already ested class and modifying things to extend functionality, this is probably not the best way to go. And you should consider using the object oriented paradigm and inheritance instead of just modifying existing code.
+
+The third principle, is the substitution prinple states that you should always be able to substitute a base type for a subtype.
+
+The fourth one is the interface segregation principle, the idea that you shouldn't be putting too much into an interface.to avoid forcing implementors to implement extra functionalities, they don't need
+
+The last one is the dependency inversion principle,
+Basically, this idea is that high-level modules should not depend on low-level ones, that you should abstractions instead and have everything done through abstractions.
