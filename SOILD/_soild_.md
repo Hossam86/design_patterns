@@ -34,3 +34,8 @@ we conceptually separate our filtering process into two parts
 
 1. filter (a process that takes all items and returns some )
 2. specification definition of a function that will apply to the data
+
+## Liskov Substitution Principle
+
+subtypes should be sbstiitble with basetype
+in other words, if the interface take an object of type parent, it should equlally take a child with out breaking any thing
