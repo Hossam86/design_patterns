@@ -37,6 +37,7 @@ unique_ptr<HotDrink> make_drink(string type)
         drink = make_unique<Coffe>();
         drink->prepare(200);
     }
+    return drink;
 }
 
 // Now, remember, different drinks are made by different machinery.
