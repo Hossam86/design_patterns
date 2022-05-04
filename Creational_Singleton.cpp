@@ -7,7 +7,7 @@
 using namespace std;
 
 // What --> Prevent object construction more than once.
-// Why  --> Components that needs to instantiated only once like Database repo, object factory
+// Why  --> Components that needs to instantiated only once like database repo, object factory
 // How  --> Idea is hide the object constructor and delete the copy constructor and assigment operator
 
 struct SingleDataBase {
