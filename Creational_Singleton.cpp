@@ -26,9 +26,9 @@ private:
     }
 
     map<string, int> Capitals;
+
 public:
     SingleDataBase(const SingleDataBase &other) = delete;
-
     void operator=(const SingleDataBase &rhs) = delete;
 
     static SingleDataBase &get() {
