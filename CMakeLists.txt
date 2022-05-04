@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.20)
 project(design_patterns C CXX)
 
 set (CMAKE_CXX_STANDARD 17)
-add_executable(Creational_Builder Creational_Builder.cpp)
+# add_executable(Creational_Builder Creational_Builder.cpp)
 add_executable(Creational_Factory Creational_Factory.cpp)
-add_executable(Creational_Abstract Creational_Abstract.cpp)
+# add_executable(Creational_Abstract Creational_Abstract.cpp)
 add_executable(Creational_Prototype Creational_Prototype.cpp)
 add_executable(Creational_Singleton Creational_Singleton.cpp)
 
