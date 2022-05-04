@@ -15,13 +15,11 @@ struct SingleDataBase {
 private:
     SingleDataBase() {
         cout << "initializing Database" << endl;
-        ifstream ifs("capitals.txt");
+        ifstream ifs("/Users/hossamsamir/Projects/design_patterns/capitals.txt.txt");
         string s, s2;
         while (getline(ifs, s)) {
             getline(ifs, s2);
-            stringstream cast(s2);
-            int pop = 0;
-            cast >> pop;
+            auto pop = stoi(s2);
             this->Capitals[s] = pop;
         }
     }
