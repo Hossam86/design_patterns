@@ -1,7 +1,7 @@
 // Adpator Pattern
-// what --> get the interface you want from the interface you have
 // why -->suppose you want to keep working with geometrical objects but also need the rendering,
 //          so you need to adapt your geometry to pixel-based representation.
+// what --> get the interface you want from the interface you have
 // how --> idea to interface object do the necessary steps for the conversion
 //          and also can include cache maps to cache information that not changed or any other optimization
 
@@ -15,7 +15,7 @@ namespace geom {
     };
 
     struct Line {
-        point start, end;
+        Point start, end;
     };
 
     struct VectorObject {
