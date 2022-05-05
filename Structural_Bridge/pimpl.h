@@ -1,7 +1,7 @@
-#include <memory>
-
+// This is shrink wrap implementation for using as template for bridge pattern
 #ifndef DESIGN_PATTERNS_PIMPL_H
 #define DESIGN_PATTERNS_PIMPL_H
+#include <memory>
 
 template<class T>
 class pimpl {
