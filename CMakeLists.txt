@@ -7,4 +7,5 @@ add_executable(Creational_Factory Creational_Factory.cpp)
 # add_executable(Creational_Abstract Creational_Abstract.cpp)
 add_executable(Creational_Prototype Creational_Prototype.cpp)
 add_executable(Creational_Singleton Creational_Singleton.cpp)
+add_executable(Structrual_Adaptor Structrual_Adaptor.cpp)
 
