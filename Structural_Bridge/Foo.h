@@ -7,7 +7,7 @@
 class Foo {
     class impl;
 
-    pimpl<impl> impl
+    pimpl<impl> impl;
 };
 
 

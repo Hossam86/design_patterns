@@ -18,7 +18,7 @@ void Circle::resize(float factor) {
 }
 
 void Square::draw() {
-    renderer.render_circle()
+    renderer.render_square(size);
 }
 
 void Square::resize(float factor) {

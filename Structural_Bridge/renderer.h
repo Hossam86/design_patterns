@@ -10,6 +10,7 @@
 
 struct Renderer {
     virtual void render_circle(float x, float y, float radius) = 0;
+    virtual  void render_square(float size)=0;
 };
 
 struct VectorRenderer : Renderer {
