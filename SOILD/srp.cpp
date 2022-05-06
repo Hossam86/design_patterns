@@ -5,13 +5,13 @@
 
 using namespace std;
 
-struct Journal
-{
+struct Journal {
     string title;
     vector<string> entries;
 
     explicit Journal(const string &title)
-        : title(title) {}
+            : title(title) {}
+
     void add_entry(const string &entry);
 
     //  This is will break Single Responsibility Principle (SRP) because
@@ -19,33 +19,27 @@ struct Journal
     void save(const string &file_name);
 };
 
-void Journal::add_entry(const string &entry)
-{
+void Journal::add_entry(const string &entry) {
     static size_t count = 0;
     this->entries.push_back(to_string(count++) + " : " + entry);
 }
 
-void Journal::save(const string &file_name)
-{
+void Journal::save(const string &file_name) {
     ofstream ofs(file_name);
-    for (auto &e : entries)
-    {
+    for (auto &e: entries) {
         ofs << e << endl;
     }
 }
 
-struct PersistenceManager
-{
-    static void save(const Journal &j, const string &filename)
-    {
+struct PersistenceManager {
+    static void save(const Journal &j, const string &filename) {
         ofstream ofs(filename);
-        for (auto &s : j.entries)
+        for (auto &s: j.entries)
             ofs << s << endl;
     }
 };
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     Journal journal("Dear Diary");
     journal.add_entry("I ate a bug");
     journal.add_entry("I cried today");

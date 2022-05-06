@@ -11,5 +11,5 @@ add_executable(Singleton Creational/Singleton.cpp)
 # Structural Patterns
 #add_executable(Adaptor Structrual_Adaptor.cpp)
 add_subdirectory(Structural/Bridge)
-add_executable(Decorator Structural/Structural_Decorator.cpp)
+add_executable(Decorator Structural/Decorator.cpp)
 add_executable(Proxy Structural/Proxy/smart_pointers.cpp)

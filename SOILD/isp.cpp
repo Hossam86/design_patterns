@@ -1,4 +1,5 @@
 #include <vector>
+
 struct Document;
 
 // struct IMachine
@@ -19,45 +20,38 @@ struct Document;
 // 2. Client does not need this
 // 3. Forcing implementors to implement too much
 
-struct IPrinter
-{
+struct IPrinter {
     virtual void print(Document &doc) = 0;
 };
 
-struct IScanner
-{
+struct IScanner {
     virtual void scan(Document &doc) = 0;
 };
 
-struct Printer : IPrinter
-{
+struct Printer : IPrinter {
     void print(Document &doc) override;
 };
 
-struct Scanner : IScanner
-{
+struct Scanner : IScanner {
     void scan(Document &doc) override;
 };
 
-struct IMachine : IPrinter, IScanner
-{
+struct IMachine : IPrinter, IScanner {
 };
 
-struct Machine : IMachine
-{
+struct Machine : IMachine {
     IPrinter &printer;
     IScanner &scanner;
 
     Machine(IPrinter &printer, IScanner &scanner)
-        : printer{printer},
-          scanner{scanner}
-    {
+            : printer{printer},
+              scanner{scanner} {
     }
 
-    void print(Document &doc) override
-    {
+    void print(Document &doc) override {
         printer.print(doc);
     }
+
     void scan(Document &doc) override;
 };
 
