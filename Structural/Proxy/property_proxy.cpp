@@ -25,5 +25,4 @@ int main() {
     Creature c;
     c.strength = 10;
     c.agility = 5;
-
 };
