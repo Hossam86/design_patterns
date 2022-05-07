@@ -1,1 +1,1 @@
-add_executable(property property.cpp)
+add_executable(property property_proxy.cpp)
