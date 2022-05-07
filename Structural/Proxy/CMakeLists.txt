@@ -1,2 +1,3 @@
 add_executable(virtual_proxy virtual_proxy.cpp)
 add_executable(property property_proxy.cpp)
+add_executable(communication_proxy communication_proxy.cpp)
