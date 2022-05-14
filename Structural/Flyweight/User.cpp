@@ -14,7 +14,8 @@ private:
     static key seed;
 
     static key add(const std::string &name) {
-        auto it = names.righ(name);
+//        auto it = names.righ(name);
+        return key{};
     }
 };
 
