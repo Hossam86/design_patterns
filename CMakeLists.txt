@@ -6,3 +6,4 @@ set (CMAKE_CXX_STANDARD 20)
 add_subdirectory(Creational)
 # Structural Patterns
 add_subdirectory(Structural)
+add_subdirectory(Behavioral)
