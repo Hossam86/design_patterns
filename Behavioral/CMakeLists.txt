@@ -1,1 +1,1 @@
-add_executable(cor Creature.cpp)
+add_executable(cor chain_of_resp.cpp)
