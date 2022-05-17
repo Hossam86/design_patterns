@@ -78,6 +78,19 @@ struct IncreaseDenseModifier : CreatureModifier {
     }
 };
 
+//Suppose you decide to cast a spell on a creature such that no bonus can be applied to it. Is it easy to do?
+// Quite easy, actually, because all you have to do is avoid calling the base handle(): (break the chain)
+// this avoids executing the entire chain:
+
+struct  NoBonusesModifier:CreatureModifier
+{
+    NoBonusesModifier(Creature &creature) : CreatureModifier(creature) {}
+
+    void handle() override {
+
+    }
+};
+
 int main() {
     Creature goblin{" goblin", 1, 1};
     CreatureModifier root{goblin};
