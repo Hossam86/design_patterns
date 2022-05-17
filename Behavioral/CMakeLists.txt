@@ -1,1 +1,2 @@
-add_executable(cor chain_of_resp.cpp)
+add_subdirectory(Chain)
+add_subdirectory(Command)
