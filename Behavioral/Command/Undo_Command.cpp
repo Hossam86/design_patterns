@@ -40,7 +40,7 @@ struct BankAccountCommand : Command {
 
     int amount;
     // log
-    bool withdrawn_succecded;
+    bool withdrawSuccecded;
 
     BankAccountCommand(BankAccount &account, Action action, int amount) : account(account), action(action),
                                                                           amount(amount) {}
@@ -51,7 +51,7 @@ struct BankAccountCommand : Command {
                 account.deposit(amount);
                 break;
             case WITHDRAW:
-                withdrawn_succecded = account.withdraw(amount);
+                withdrawSuccecded = account.withdraw(amount);
                 break;
 
         }
@@ -60,7 +60,7 @@ struct BankAccountCommand : Command {
     void undo() override {
         switch (action) {
             case WITHDRAW:
-                if (withdrawn_succecded)
+                if (withdrawSuccecded)
                     account.withdraw(amount);
 
         }
